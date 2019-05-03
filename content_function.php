@@ -18,7 +18,7 @@
 		include ('dbconn.php');
 		$select = mysqli_query($con, "SELECT cat_id, subcat_id, subcategory_title, subcategory_desc FROM categories, subcategories
 										WHERE ($parent_id = categories.cat_id) AND ($parent_id = subcategories.parent_id)");
-		echo "<tr><th width='90%'>Categories</th><th width='10%'>Topics</th></tr>";
+		echo "<tr><th class='category'>Categories</th><th class='categorytopic'>Topics</th></tr>";
 		while ($row = mysqli_fetch_assoc($select)) {
 		echo "<tr><td class='category_title'><a href='topics.php?cid=".$row['cat_id']."&scid=".$row['subcat_id']."'>
 			".$row['subcategory_title']."<br>";
@@ -40,7 +40,7 @@
 		$select = mysqli_query($con, "SELECT topic_id, author, title, date_posted, views, replies FROM categories, subcategories, topics 
 									  WHERE ($cid = topics.category_id) AND ($scid = topics.subcategory_id) AND ($cid = categories.cat_id)
 									  AND ($scid = subcategories.subcat_id) ORDER BY topic_id DESC");
-		if(mysqli_num_rows($select) != 0) {
+		if (mysqli_num_rows($select) != 0) {
 			echo "<table class='topic-table'>";
 			echo "<tr><th>Title</th><th>Posted By</th><th>Date Posted</th><th>Views</th><th>Replies</th></tr>";
 			while ($row = mysqli_fetch_assoc($select)) {
@@ -49,11 +49,11 @@
 					 <td>".$row['replies']."</td></tr>";
 			}
 			echo "</table>";
-		} 	else {
-				echo "<p>this category has no topics yet!  <a href='newtopic.php?cid=".$cid."&scid=".$scid."'>
-					add the very first topic like a boss! (click here)</a></p>";
+		} else {
+			echo "<p>this category has no topics yet!  <a href='newtopic.php?cid=".$cid."&scid=".$scid."'>
+				add the very first topic like a boss! (click here)</a></p>";
 			}
-		}
+	}
 	
 	function disptopic($cid, $scid, $tid) {
 		include ('dbconn.php');
@@ -101,11 +101,11 @@
 	}
 	
 	function countReplies($cid, $scid, $tid) {
-		include('dbconn.php');
+		include ('dbconn.php');
 		$select = mysqli_query($con, "SELECT category_id, subcategory_id, topic_id FROM replies WHERE ".$cid." = category_id AND 
 									  ".$scid." = subcategory_id AND ".$tid." = topic_id");
 		return mysqli_num_rows($select);
-		
 	}
+		
 	
 ?>

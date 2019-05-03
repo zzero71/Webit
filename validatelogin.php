@@ -6,7 +6,9 @@
 	$username = $_POST['user'];
 	$password = $_POST['pass'];
 	
-	$result = mysqli_query($con, "SELECT username, password FROM users WHERE username = '".$username."' AND password = '".$password."'");
+	$encrypt_password = md5($password);
+	
+	$result = mysqli_query($con, "SELECT username, password FROM users WHERE username = '".$username."' AND password = '".$encrypt_password."'");
 	
 	if (mysqli_num_rows($result) != 0) {
 		$_SESSION['username'] = $username;
