@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Värd: 127.0.0.1
--- Tid vid skapande: 03 maj 2019 kl 18:27
+-- Tid vid skapande: 03 maj 2019 kl 19:08
 -- Serverversion: 10.1.37-MariaDB
 -- PHP-version: 7.3.1
 
@@ -136,7 +136,7 @@ INSERT INTO `topics` (`topic_id`, `replies`, `category_id`, `subcategory_id`, `a
 (8, 0, 1, 1, 'zzero', 'Ja det fungerar', 'Det rullar', '2019-05-01', 22),
 (15, 0, 1, 1, 'zzero', 'dsadsa', 'dsada', '2019-05-01', 79),
 (16, 0, 1, 2, 'zzero', 'Ja det fungerar', 'Wow', '2019-05-03', 6),
-(17, 0, 1, 1, 'zzero', 'Ja det fungerar', 'Ã„n sÃ¥ lÃ¤nge', '2019-05-03', 73),
+(17, 0, 1, 1, 'zzero', 'Ja det fungerar', 'Ã„n sÃ¥ lÃ¤nge', '2019-05-03', 77),
 (18, 0, 1, 1, 'zzero', '', '', '2019-05-03', 0),
 (19, 0, 1, 1, 'zzero', '', '', '2019-05-03', 0),
 (20, 0, 3, 6, 'zzero', 'TEst', 'test', '2019-05-03', 6);
@@ -159,14 +159,8 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`user_id`, `username`, `password`, `email`) VALUES
-(2, 'zero', 'apa123', 'zzero71tv@hotmail.com'),
-(3, 'dsadadsa', 'dsa', 'zzero71tv@hotmail.com'),
-(4, 'zzero', 'dsa', 'zzero71tv@hotmail.com'),
-(5, 'lojfhsik', 'dsa', 'dsa@dsada.com'),
-(6, 'zzero', 'dsa', 'zzero71tv@hotmail.com'),
-(7, 'plox301', 'dsa', 'thebluecreeper@live.se'),
-(8, 'dsadsad', 'dsadsa', 'dsadsada'),
-(9, 'lojfhsik', 'dsadsa', 'dsa@dsada.com');
+(13, 'zzero', '5f039b4ef0058a1d652f13d612375a5b', 'zzero71tv@hotmail.com'),
+(14, 'plox301', '5f039b4ef0058a1d652f13d612375a5b', 'thebluecreeper@live.se');
 
 --
 -- Index för dumpade tabeller
@@ -243,7 +237,7 @@ ALTER TABLE `topics`
 -- AUTO_INCREMENT för tabell `users`
 --
 ALTER TABLE `users`
-  MODIFY `user_id` int(8) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `user_id` int(8) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- Restriktioner för dumpade tabeller
