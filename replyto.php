@@ -5,7 +5,7 @@
 	<div>
 		<?php
 			if(!isset($_SESSION['username'])) {
-				echo "<p>please do login or these kinds of features isnt possible for you</p>";
+				echo "<p class='content'>please do login or these kinds of features isnt possible for you</p>";
 			}
 		?>
 		<div>

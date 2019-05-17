@@ -18,7 +18,7 @@
 	<body>
 		<nav>
 			<ul>
-				<li class='logo'><a href="index.php"><img src='images/logo.png' alt='Logotyp'></a></li>
+				<li class='logo'><a href="/Webit"><img src='images/logo.png' alt='Logotyp'></a></li>
 				<?php
 					session_start();
 					if(!isset($_SESSION['username'])) {

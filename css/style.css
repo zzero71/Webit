@@ -356,7 +356,7 @@ div.forumdesc {
 	padding: 15px;
 }
 
-div.content {
+div.content{
 	background-color: #EFEFEF;
 	display: block;
 	margin:0 auto;
@@ -455,5 +455,24 @@ table.reply-table td {
 	padding-left: 15px;
 	vertical-align: top;
 	margin-bottom: 5px;
+}
+
+.category {
+	width:90%;
+}
+
+.categorytopic {
+	width:10%;
+}
+
+p.content {
+	background-color: #EFEFEF;
+	display: block;
+	margin:0 auto;
+	margin-top: 15px;
+	width: 50%;
+	position: relative;
+	padding: 15px;
+	color:red;
 }
 

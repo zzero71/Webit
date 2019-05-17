@@ -29,15 +29,15 @@
 		echo "<form action='addnewuser.php' method='POST' class='sign-up-htm' >
 					<div class='group'>
 						<label for='user' class='label'>Username</label>
-						<input id='user' name='user' type='text' class='input'>
+						<input id='user' name='user' type='text' class='input' required>
 					</div>
 					<div class='group'>
 						<label for='pass' class='label'>Password</label>
-						<input id='pass' name='pass' type='password' class='input' data-type='password'>
+						<input id='pass' name='pass' type='password' class='input' data-type='password' required>
 					</div>
 					<div class='group'>
 						<label for='email' class='label'>Email Address</label>
-						<input id='email' name='email' type='email' class='input'>
+						<input id='email' name='email' type='email' class='input' required>
 					</div>
 					<div class='group'>
 						<input type='submit' class='button' value='Sign Up'>
